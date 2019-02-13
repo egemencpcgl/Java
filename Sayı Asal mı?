@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class asallikbulma {
+
+	public static void main(String[] args) {
+		Scanner a = new Scanner(System.in);
+		System.out.println("Bir sayi girinz: ");
+		int x = a.nextInt();
+		int bolunen=0;
+		for (int i=1;i<=x;i++) {
+			if(x%i ==0) {
+				bolunen++;
+				if(bolunen>2) {
+					System.out.println("Sayi asal degildir.");
+					return;
+				}
+			}
+		}
+		System.out.println("Asaldir.");
+		}
+}
