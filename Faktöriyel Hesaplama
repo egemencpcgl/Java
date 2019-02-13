@@ -1,0 +1,36 @@
+//////////////////      FAKTORÝYEL HESAPLAYAN     ////////////////
+///////////////////////  CONSOLE UYGULAMASI   ////////////////////
+import java.util.*;
+
+public class faktoriyelhesapla{
+    public static void main(String[] args) 
+    {
+        int x = 1;
+        int factValue = 1;
+        Scanner userInput = new Scanner(System.in);
+        restart: while(true){
+        System.out.println("Faktoriyel alýnacak pozitif tam sayiyi girin:");
+        int factInput = userInput.nextInt();
+
+        while(factInput<=0)
+        {
+            System.out.println("Pozitif sayi giriniz.");
+            factInput = userInput.nextInt();
+        }
+
+        if(x<1) 
+        {
+            System.out.println("Tam sayi giriniz.");
+            continue restart;
+        }
+        while(x<=factInput)
+        {
+            factValue*=x;
+            x++;
+        }
+        System.out.println(factInput+"! = "+factValue);
+        userInput.close();
+        break restart;
+}
+}
+}
